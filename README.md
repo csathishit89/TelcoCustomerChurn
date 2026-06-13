@@ -115,7 +115,8 @@ Features:
 
 ### Application Screenshot
 
-_Add screenshots here_
+<img width="1356" height="587" alt="image" src="https://github.com/user-attachments/assets/6ca4fdf0-51b5-4552-af4e-5e8695691a5e" />
+
 
 ---
 

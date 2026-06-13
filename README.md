@@ -1,60 +1,225 @@
-# 💬 Client Query Management System (CQMS)
+# 📞 Telco Customer Churn Prediction
 
-**A comprehensive web application designed to efficiently track, manage, and resolve client inquiries, ensuring timely and effective communication.**
+A Machine Learning web application built using Streamlit to predict whether a telecom customer is likely to churn based on customer demographics, account information, and billing details.
 
-## ✨ Key Features
+---
 
-* **Query Tracking:** Log and track all client queries from submission to resolution.
-* **Status Management:** Assign and update query statuses (e.g., Open, Closed, Resolved Rate).
-* **User Roles:** Differentiated access for Clients (submit/view queries) and Support (resolve queries).
+## 📌 Project Overview
 
-## 🛠️ Technologies & Stack
+Customer churn is one of the major challenges faced by telecom companies. This project uses Machine Learning techniques to identify customers who are likely to leave the service, enabling businesses to take proactive retention measures.
 
-* **Frontend:** [Streamlit / HTML/CSS]
-* **Backend:** [Python ]
-* **Database:** [PostgreSQL ]
-* **Hosting/Deployment:** [AWS / ]
+The application allows users to enter customer details and receive a churn prediction along with the probability score.
 
-## ⚙️ Installation and Setup
+---
 
-Follow these steps to get a local copy of the CQMS running:
+## 🎯 Problem Statement
 
-### Prerequisites
+Predict whether a customer will:
 
-* [Python ]
-* [Database installed (e.g., PostgreSQL)]
-* [Git ]
+- Stay with the telecom company
+- Churn (leave the company)
 
-### 1. Clone the repository
+This is a **Binary Classification Problem**.
+
+---
+
+## 📊 Dataset
+
+**Dataset:** Telco Customer Churn Dataset
+
+Features include:
+
+- Gender
+- Senior Citizen
+- Partner
+- Dependents
+- Tenure
+- Phone Service
+- Internet Service
+- Contract Type
+- Payment Method
+- Monthly Charges
+- Total Charges
+
+**Target Variable:**
+
+- Churn (Yes / No)
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+The following analyses were performed:
+
+- Churn Distribution
+- Contract Type vs Churn
+- Tenure vs Churn
+- Monthly Charges vs Churn
+- Payment Method vs Churn
+- Correlation Analysis
+
+### Key Insights
+
+- Customers with Month-to-Month contracts showed higher churn rates.
+- Customers with shorter tenure were more likely to churn.
+- Higher monthly charges were associated with increased churn.
+- Long-term contract customers were less likely to leave.
+
+---
+
+## ⚙️ Data Preprocessing
+
+- Removed irrelevant features
+- Handled missing values
+- Converted data types
+- Label Encoding
+- Feature Selection
+- Train-Test Split
+
+---
+
+## 🤖 Machine Learning Model
+
+### Algorithm Used
+
+- Logistic Regression
+
+### Model Evaluation
+
+Metrics used:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+### Results
+
+| Metric | Score |
+|----------|----------|
+| Accuracy | 81.6% |
+| Recall | 82% |
+| F1 Score | 64% |
+
+---
+
+## 🖥️ Streamlit Application
+
+Features:
+
+- Customer Churn Prediction
+- Probability Score Display
+- User-Friendly Interface
+- Real-Time Predictions
+
+### Application Screenshot
+
+_Add screenshots here_
+
+---
+
+## 🛠️ Tech Stack
+
+### Programming Language
+
+- Python
+
+### Libraries
+
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Streamlit
+- Joblib
+
+---
+
+## 📂 Project Structure
+
+```text
+TelcoCustomerChurn/
+│
+├── app.py
+├── churn_model.pkl
+├── requirements.txt
+├── Telco-Customer-Churn.csv
+├── notebooks/
+│   └── Telco_Customer_Churn.ipynb
+├── assets/
+│   └── screenshots/
+└── README.md
+```
+
+---
+
+## 🚀 Installation
+
+### Clone Repository
 
 ```bash
-git clone https://github.com/csathishit89/jioSupportManagementSystem.git
-cd jioSupportManagementSystem
+git clone <repository-url>
+cd TelcoCustomerChurn
+```
 
-# Install backend dependencies
+### Create Virtual Environment
+
+```bash
+python -m venv clientenv
+```
+
+### Activate Environment
+
+#### Windows
+
+```bash
+clientenv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Start the application server
-streamlit run C:\MAMP\htdocs\clientQueryManagement\clientEnv\Scripts\app.py
+### Run Application
 
-The application should now be accessible at http://localhost:8501.
+```bash
+streamlit run app.py
+```
 
-### 5. Usage
+---
 
-Explain how the system is used, focusing on the different user types.
+## 📈 Future Improvements
 
-```markdown
-## 📖 Usage Guide
+- Random Forest Classifier
+- XGBoost Classifier
+- Hyperparameter Tuning
+- Feature Importance Visualization
+- Deployment on Streamlit Cloud
+- Customer Retention Recommendation System
 
-### Client Portal
+---
 
-1.  **Submit a Query:** Navigate to `/submit`, fill in the required fields (Query Heading, Query Description), and submit.
-2.  **Track Queries:** Log in and visit the dashboard to view the status of all your submitted queries.
+## 💡 Business Impact
 
-### Support Panel
+This solution helps telecom companies:
 
-1.  **Login:** Use your Support credentials at the `Support` page.
-2.  **View New Queries:** New queries are visible on the Queries page.
-3.  **Check Open query & Update:** Change the query status and update to Closed status once it is resolved.
-4.  **Resolve:** Mark the query as "Closed"
+- Identify customers likely to churn
+- Improve customer retention strategies
+- Reduce revenue loss
+- Increase customer satisfaction
 
+---
+
+## 👨‍💻 Author
+
+**Sathish C**
+
+Aspiring Data Scientist passionate about Machine Learning, Data Analysis, and AI-driven solutions.
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star on GitHub!
